@@ -7,7 +7,7 @@ header('Content-type: text/html; charset=utf-8');
   <body>
     <form name="form1" method="POST" action="incluir.php">
     <?php
-      if(isset($_GET["codigo"])){	
+      if(isset($_GET["idrestaurante"])){	
       include("./config.php");
       $con = mysqli_connect($host, $login, $senha, $bd);
     ?>
@@ -21,7 +21,7 @@ header('Content-type: text/html; charset=utf-8');
       mysqli_close($con);
     ?>
 
-    <input type="hidden" name="codigo" value="<?php echo $_GET['idrestaurante']; ?>">
+    <input type="hidden" name="idrestaurante" value="<?php echo $_GET['idrestaurante']; ?>">
 
     <?php
     }
@@ -37,15 +37,6 @@ header('Content-type: text/html; charset=utf-8');
 
     <table border="0" align="center" width="35%">
 
-    <tr>
-        <td width="20%">ID:</td>
-
-        <td colspan="2" width="90%">
-	        <input type="text" name="nome" value="<?php echo @$vetor['idrestaurante']; ?>" maxlength="50" size="40">
-	      </td>
-      </tr>
-
-
       <tr>
         <td width="20%">Nome:</td>
 
@@ -59,8 +50,8 @@ header('Content-type: text/html; charset=utf-8');
 
         <td>Horarios:</td>
         <td>
-          <input type="time" name="numero" value="<?php echo @$vetor['horario_abre']; ?>" maxlength="10" size="15">
-          <input type="time" name="telefone" value="<?php echo @$vetor['horario_fecha']; ?>" maxlength="10" size="15">
+          <input type="text" name="numero" value="<?php echo @$vetor['horario_abre']; ?>" maxlength="10" size="15">
+          <input type="text" name="telefone" value="<?php echo @$vetor['horario_fecha']; ?>" maxlength="10" size="15">
         </td>
 
 	      </td>
