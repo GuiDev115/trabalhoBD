@@ -35,6 +35,10 @@ header('Content-type: text/html; charset=utf-8');
       else{
     ?>
 
+    <?php
+      while($dados = mysqli_fetch_row($tabela)){
+    ?>
+
 	    <tr bgcolor="grey">
         <td width="16%">Nome</td>
         <td width="16%">CNPJ</td>
@@ -43,12 +47,7 @@ header('Content-type: text/html; charset=utf-8');
         <td width="16%">Logradouro</td>
         <td width="16%">Numero</td>
       </tr>
-
-
-    <?php
-      while($dados = mysqli_fetch_row($tabela)){
-    ?>
-
+      
         <tr>
           <td><?php echo $dados[1]; ?></td>
           <td><?php echo $dados[2]; ?></td>
