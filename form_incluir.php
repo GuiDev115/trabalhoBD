@@ -116,8 +116,8 @@ header('Content-type: text/html; charset=utf-8');
         <td width="20%">Estado:</td>
 
         <td colspan="2" width="90%">
-        <select name="estados-brasil">
-          <option value="AC">Acre</option>
+        <select name="estado">
+          <option value="<?php echo @$vetor['estado']; ?>">AC</option>
           <option value="AL">Alagoas</option>
           <option value="AP">Amapá</option>
           <option value="AM">Amazonas</option>
