@@ -91,7 +91,8 @@ header('Content-type: text/html; charset=utf-8');
     ?>
 
     <tr><td colspan="3" align="left">
-      <input type="submit" value="Incluir Novo Contato">
+      <input type="submit" value="Incluir Cadastro">
+      <input type="button" value="Alterar Cadastro" onclick="location.href='alterar.php'">
     <?php
       }
     ?>
