@@ -75,6 +75,7 @@ header('Content-type: text/html; charset=utf-8');
           <td><?php echo $dados[10]; ?></td>
           <td><?php echo $dados[11]; ?></td>
           <td><?php echo $dados[12]; ?></td>
+          <td><input type="button" value="Excluir" onclick="location.href='excluir.php?idrestaurante=<?php echo $dados[0]; ?>'"></td>
 	        <td align="center">
 	        </td>
         </tr>
@@ -91,8 +92,6 @@ header('Content-type: text/html; charset=utf-8');
 
     <tr><td colspan="3" align="left">
       <input type="submit" value="Incluir Novo Contato">
-      <input type="button" value="Excluir" onclick="location.href='exclu7ir.php?codigo=<?php echo $dados[0]; ?>'">
-	    <input type="button" value="Editar" onclick="location.href='form_incluir.php?codigo=<?php echo $dados[0]; ?>'"></td></tr>
     <?php
       }
     ?>

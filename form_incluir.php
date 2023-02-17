@@ -54,11 +54,11 @@ header('Content-type: text/html; charset=utf-8');
         <td width="20%">Nome:</td>
 
         <td colspan="2" width="90%">
-	        <input type="text" name="nomeRest" value="<?php echo @$vetor['nomeRest']; ?>" maxlength="50" size="40">
+	        <input type="text" name="nomeRest" value="<?php echo @$vetor['nomeRest']; ?>" maxlength="30" size="40">
 
           <td>CPNJ:</td>
           <td>
-            <input type="text" name="cnpj_rest" value="<?php echo @$vetor['cnpj_rest']; ?>" maxlength="10" size="15">
+            <input type="text" name="cnpj_rest" value="<?php echo @$vetor['cnpj_rest']; ?>" maxlength="14" size="15">
           </td>
 
         <td>Horario Abre:</td>
@@ -79,12 +79,12 @@ header('Content-type: text/html; charset=utf-8');
 
           <td>Logradouro:</td>
           <td>
-            <input type="text" name="logradouro" value="<?php echo @$vetor['logradouro']; ?>" maxlength="10" size="15">
+            <input type="text" name="logradouro" value="<?php echo @$vetor['logradouro']; ?>" maxlength="40" size="15">
           </td>
 
         <td>Numero:</td>
         <td>
-          <input type="text" name="numero" value="<?php echo @$vetor['numero']; ?>" maxlength="10" size="15">
+          <input type="text" name="numero" value="<?php echo @$vetor['numero']; ?>" maxlength="4" size="15">
         </td>
 
 	      </td>
@@ -97,16 +97,16 @@ header('Content-type: text/html; charset=utf-8');
         <td width="20%">Complemento:</td>
 
         <td colspan="2" width="90%">
-	        <input type="text" name="complemento" value="<?php echo @$vetor['complemento']; ?>" maxlength="50" size="40">
+	        <input type="text" name="complemento" value="<?php echo @$vetor['complemento']; ?>" maxlength="30" size="40">
 
           <td>Cidade:</td>
           <td>
-            <input type="text" name="cidade" value="<?php echo @$vetor['cidade']; ?>" maxlength="10" size="15">
+            <input type="text" name="cidade" value="<?php echo @$vetor['cidade']; ?>" maxlength="40" size="15">
           </td>
 
         <td>Bairro:</td>
         <td>
-          <input type="text" name="bairro" value="<?php echo @$vetor['bairro']; ?>" maxlength="10" size="15">
+          <input type="text" name="bairro" value="<?php echo @$vetor['bairro']; ?>" maxlength="20" size="15">
         </td>
 
 	      </td>
@@ -116,67 +116,44 @@ header('Content-type: text/html; charset=utf-8');
         <td width="20%">Estado:</td>
 
         <td colspan="2" width="90%">
-	        <input type="text" name="estado" value="<?php echo @$vetor['estado']; ?>" maxlength="50" size="40">
+        <select name="estados-brasil">
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+        </select>
 
           <td>CEP:</td>
           <td>
-            <input type="text" name="cep" value="<?php echo @$vetor['cep']; ?>" maxlength="10" size="15">
+            <input type="text" name="cep" value="<?php echo @$vetor['cep']; ?>" maxlength="8" size="15">
           </td>
 
 	      </td>
       </tr>
-<!--
-      <tr>
-      </tr>
 
-      <tr>
-        <td>Logradouro:</td> 
-
-        <td colspan="2" width="90%">  
-          <input type="text" name="logradouro" value="<?php //echo @$vetor['logradouro']; ?>" maxlength="50" size="20">
-
-          <td>Numero:</td>
-          <td>
-            <input type="text" name="numero" value="<?php //echo @$vetor['numero']; ?>" maxlength="10" size="5">
-          </td>
-
-          <td>Complemento:</td>
-          <td>
-            <input type="text" name="complemento" value="<?php //echo @$vetor['complemento']; ?>" maxlength="10" size="6">
-          </td>
-
-        </td>
-      </tr>
-
-      <tr>
-        <td>Cidade:</td> 
-
-        <td colspan="2" width="90%">  
-          <input type="text" name="cidade" value="<?php //echo @$vetor['cidade']; ?>" maxlength="50" size="20">
-
-          <td>Bairro:</td>
-          <td>
-            <input type="text" name="bairro" value="<?php //echo @$vetor['bairro']; ?>" maxlength="10" size="5">
-          </td>
-
-          <td>Estado:</td>
-          <td>
-            <input type="text" name="estado" value="<?php //echo @$vetor['estado']; ?>" maxlength="10" size="6">
-          </td>
-
-        </td>
-      </tr>
-
-      <tr>
-        <td>CEP:</td> 
-
-        <td colspan="2" width="90%">  
-          <input type="text" name="cep" value="<?php //echo @$vetor['cep']; ?>" maxlength="50" size="20">
-        </td>
-      </tr>
-
-      <tr>
-  -->
         <td colspan="3" align="left">
           <br>
           <input type="button" value="Cancelar" onclick="location.href='index.php'">

@@ -17,13 +17,11 @@
 
   //echo $_POST["nome"], " ", $_POST["valor"], " ", $_POST["descricao"];
 
-  echo $_POST["horario_fecha"];
 
-  //$sql = "INSERT INTO restaurante (idrestaurante, nomeRest, cnpj_rest, horario_abre, horario_fecha, logradouro, numero, complemento, cidade, bairro, estado, cep) VALUES ('10', '".$_POST["nomeRest"]."', '".$_POST["cnpj_rest"]."','".$_POST["horario_abre"]."','".$_POST["horario_fecha"]."','".$_POST["logradouro"]."','".$_POST["numero"]."','".$_POST["horario_abre"]."','".$_POST["complemento"]."','".$_POST["cidade"]."'),'".$_POST["bairro"]."'),'".$_POST["estado"].",'".$_POST["cep"]."')')";
+  $sql = "INSERT INTO restaurante (idrestaurante, nomeRest, cnpj_rest, horario_abre, horario_fecha, logradouro, numero, complemento, cidade, bairro, estado, cep) VALUES (null, '".$_POST["nomeRest"]."', '".$_POST["cnpj_rest"]."','".$_POST["horario_abre"]."','".$_POST["horario_fecha"]."','".$_POST["logradouro"]."','".$_POST["numero"]."','".$_POST["complemento"]."','".$_POST["cidade"]."','".$_POST["bairro"]."','".$_POST["estado"]."','".$_POST["cep"]."')";
 
 
   if (mysqli_query($con, $sql)) {
-    echo "New record created successfully";
     header("location: ./index.php");
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($con);
