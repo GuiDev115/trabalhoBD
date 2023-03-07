@@ -98,11 +98,27 @@ header('Content-type: text/html; charset=utf-8');
     ?>
 
     <tr><td colspan="3" align="left">
-      <input type="submit" value="Incluir Cadastro">
+      <input type="submit" value="Novo Cadastro">
     <?php
       }
     ?>
-      </table>
     </form>
+    <form name="form1" method="POST" action="select01.php">
+    </table></br>
+
+    <table border="0" align="center" width="60%">
+<tr>
+  <td width="16%">Selecione uma Tabela:</td>
+
+  <td colspan="2" width="90%">
+  <select name="tabela" value="<?php echo @$vetor['tabela']; ?>">
+    <option value="restaurante">Restaurante</option>
+    <option value="produto">Produto</option>
+    <option value="pedido">Pedido</option>
+    <option value="ingrediente">Ingrediente</option>
+  </select>
+  <tr><td colspan="3" align="left">
+      <input type="submit" value="Atualizar">
+</table>
   </body>
 </html>
