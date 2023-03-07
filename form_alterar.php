@@ -18,6 +18,7 @@ header('Content-type: text/html; charset=utf-8');
       if(isset($_GET["idrestaurante"])){	
       include("./config.php");
       $con = mysqli_connect($host, $login, $senha, $bd);
+
     ?>
 
     <input type="hidden" name="idrestaurante" value="<?php echo $_GET['idrestaurante']; ?>">
@@ -29,6 +30,8 @@ header('Content-type: text/html; charset=utf-8');
 
   <h2>Alterar Cadastro</h2>
 		<?php
+
+    $tabela = mysqli_query($con, $sql);
 	}
 
   if(!isset($vetor)){
@@ -54,11 +57,11 @@ header('Content-type: text/html; charset=utf-8');
         <td width="20%">Nome:</td>
 
         <td colspan="2" width="90%">
-	        <input type="text" name="nomeRest" value="<?php echo @$vetor['nomeRest']; ?>" maxlength="30" size="40" placeholder= "kekew">
+	        <input type="text" name="nomeRest" value="<?php echo @$vetor['nomeRest']; ?>" maxlength="30" size="40" placeholder= "Coloque seu novo nome aqui">
 
           <td>CPNJ:</td>
           <td>
-            <input type="text" name="cnpj_rest" value="<?php echo @$vetor['cnpj_rest']; ?>" maxlength="14" size="15">
+            <input type="text" name="cnpj_rest" value="<?php echo @$vetor['cnpj_rest']; ?>" maxlength="14" size="15" placeholder= "Coloque seu CNPJ">
           </td>
 
         <td>Horario Abre:</td>
@@ -79,12 +82,12 @@ header('Content-type: text/html; charset=utf-8');
 
           <td>Logradouro:</td>
           <td>
-            <input type="text" name="logradouro" value="<?php echo @$vetor['logradouro']; ?>" maxlength="40" size="15">
+            <input type="text" name="logradouro" value="<?php echo @$vetor['logradouro']; ?>" maxlength="40" size="15" placeholder= "Coloque seu Logradouro">
           </td>
 
         <td>Numero:</td>
         <td>
-          <input type="text" name="numero" value="<?php echo @$vetor['numero']; ?>" maxlength="4" size="15">
+          <input type="text" name="numero" value="<?php echo @$vetor['numero']; ?>" maxlength="4" size="15"placeholder= "Coloque seu Numero">
         </td>
 
 	      </td>
@@ -97,16 +100,16 @@ header('Content-type: text/html; charset=utf-8');
         <td width="20%">Complemento:</td>
 
         <td colspan="2" width="90%">
-	        <input type="text" name="complemento" value="<?php echo @$vetor['complemento']; ?>" maxlength="30" size="40">
+	        <input type="text" name="complemento" value="<?php echo @$vetor['complemento']; ?>" maxlength="30" size="40" placeholder= "Coloque seu Complemento">
 
           <td>Cidade:</td>
           <td>
-            <input type="text" name="cidade" value="<?php echo @$vetor['cidade']; ?>" maxlength="40" size="15">
+            <input type="text" name="cidade" value="<?php echo @$vetor['cidade']; ?>" maxlength="40" size="15" placeholder= "Coloque sua cidade">
           </td>
 
         <td>Bairro:</td>
         <td>
-          <input type="text" name="bairro" value="<?php echo @$vetor['bairro']; ?>" maxlength="20" size="15">
+          <input type="text" name="bairro" value="<?php echo @$vetor['bairro']; ?>" maxlength="20" size="15" placeholder= "Coloque seu bairro">
         </td>
 
 	      </td>
@@ -148,7 +151,7 @@ header('Content-type: text/html; charset=utf-8');
 
           <td>CEP:</td>
           <td>
-            <input type="text" name="cep" value="<?php echo @$vetor['cep']; ?>" maxlength="8" size="15">
+            x
           </td>
 
 	      </td>
